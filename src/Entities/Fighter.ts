@@ -32,6 +32,6 @@ export class Fighter {
   @OneToOne(() => Stats, (stats) => stats.fighter)
   stats: Stats;
 
-  @OneToMany(() => Ranking, (ranking) => ranking.fighter)
+  @OneToOne(() => Ranking, (ranking) => ranking.fighter)
   rankings: Ranking[];
 }

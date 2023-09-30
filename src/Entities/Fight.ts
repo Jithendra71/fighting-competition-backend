@@ -19,6 +19,4 @@ export class Fight {
   @Column()
   result: string;
 
-  @Column({ type: 'text', nullable: true })
-  resultDetail: string;
 }

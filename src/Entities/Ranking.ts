@@ -1,6 +1,5 @@
-import { Entity, PrimaryGeneratedColumn, Column, ManyToOne } from 'typeorm';
+import { Entity, PrimaryGeneratedColumn, Column, OneToOne } from 'typeorm';
 import { Fighter } from './Fighter';
-import { Fight } from './Fight';
 
 @Entity()
 export class Ranking {
@@ -10,7 +9,7 @@ export class Ranking {
   @Column()
   weightClass: string;
 
-  @ManyToOne(() => Fighter, (fighter) => fighter.rankings)
+  @OneToOne(() => Fighter, (fighter) => fighter.rankings)
   fighter: Fighter;
 
   @Column()
